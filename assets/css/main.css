@@ -4,7 +4,16 @@
 
 .alura-geek-azul {
     font-size: x-large;
-    color: #2A7AE4;;
+    color: #2A7AE4;
+}
+
+.ver-todo-link {
+    color: #2A7AE4;
+    text-decoration: none;
+}
+
+.contenedor-articulos {
+    padding: 30px;
 }
 
 .footer-form {
