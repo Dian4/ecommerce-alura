@@ -13,7 +13,7 @@ var productos = [
         "nombre": "Cascos Lego",
         "precio": 200.0,
         "descripción": "Cascos de Darth Vader y Stormtrooper de Lego.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/sw-lego.png",
         "categoria": "STAR_WARS"
     },
     {
@@ -21,7 +21,7 @@ var productos = [
         "nombre": "Figura Yoda",
         "precio": 150.0,
         "descripción": "Figura de Yoda.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/sw-yoda.png",
         "categoria": "STAR_WARS"
     },
     {
@@ -29,7 +29,7 @@ var productos = [
         "nombre": "Figura Stormtrooper",
         "precio": 130.0,
         "descripción": "Figura de Stormtrooper articulada.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/sw-trooper.png",
         "categoria": "STAR_WARS"
     },
     {
@@ -37,7 +37,7 @@ var productos = [
         "nombre": "Figura Grogu",
         "precio": 160.0,
         "descripción": "Figura de Grogu.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/sw-grogu.png",
         "categoria": "STAR_WARS"
     },
     {
@@ -45,7 +45,7 @@ var productos = [
         "nombre": "Figura Kylo Ren",
         "precio": 200.0,
         "descripción": "Figura de Kylo Ren.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/sw-kylo.png",
         "categoria": "STAR_WARS"
     },
     {
@@ -53,7 +53,7 @@ var productos = [
         "nombre": "Control Xbox",
         "precio": 1000.0,
         "descripción": "Control de Xbox One",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/c-xbox-control.png",
         "categoria": "CONSOLAS"
     },
     {
@@ -61,7 +61,7 @@ var productos = [
         "nombre": "Consola PS5 y control",
         "precio": 10000.0,
         "descripción": "Consola PlayStation 5 y control",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/c-ps5.png",
         "categoria": "CONSOLAS"
     },
     {
@@ -69,7 +69,7 @@ var productos = [
         "nombre": "Nintendo Entertainment System",
         "precio": 2000.0,
         "descripción": "Consola NES y control.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/c-nes.png",
         "categoria": "CONSOLAS"
     },
     {
@@ -77,7 +77,7 @@ var productos = [
         "nombre": "Control Switch",
         "precio": 4000.0,
         "descripción": "Control de Nintendo Switch azul y rojo.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/c-switch-control.png",
         "categoria": "CONSOLAS"
     },
     {
@@ -85,7 +85,7 @@ var productos = [
         "nombre": "Consola Xbox Serie X",
         "precio": 10000.0,
         "descripción": "Consola Xbox Serie X.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/c-xbox-seriex.png",
         "categoria": "CONSOLAS"
     },
     {
@@ -93,7 +93,7 @@ var productos = [
         "nombre": "Consola Game Boy Color",
         "precio": 2000.0,
         "descripción": "Consola Game Boy Color.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/c-gameboy.png",
         "categoria": "CONSOLAS"
     },
     {
@@ -101,15 +101,15 @@ var productos = [
         "nombre": "Camisa Atari",
         "precio": 300.0,
         "descripción": "Camisa con logo de Atari en japonés.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/d-atari.png",
         "categoria": "DIVERSOS"
     },
     {
         "id": "d-camisa-nes",
-        "nombre": "Camisa NES",
+        "nombre": "Camisa SNES",
         "precio": 300.0,
         "descripción": "Camisa con control de Super Nintendo.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/d-snes.png",
         "categoria": "DIVERSOS"
     },
     {
@@ -117,7 +117,7 @@ var productos = [
         "nombre": "Figura de Sonic",
         "precio": 500.0,
         "descripción": "Figura de Sonic The Hedgehog.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/d-sonic.png",
         "categoria": "DIVERSOS"
     },
     {
@@ -125,7 +125,7 @@ var productos = [
         "nombre": "Despertador",
         "precio": 400.0,
         "descripción": "Reloj y despertador en forma de radio.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/d-reloj.png",
         "categoria": "DIVERSOS"
     },
     {
@@ -133,7 +133,7 @@ var productos = [
         "nombre": "Visor VR",
         "precio": 3000.0,
         "descripción": "Visor de Realidad Virtual.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/d-vr.png",
         "categoria": "DIVERSOS"
     },
     {
@@ -141,7 +141,7 @@ var productos = [
         "nombre": "Peluche Pikachu",
         "precio": 600.0,
         "descripción": "Peluche de Pikachu.",
-        "imagen": "assets/img/sw-taza.png",
+        "imagen": "assets/img/d-pikachu.png",
         "categoria": "DIVERSOS"
     }
 ];
