@@ -150,12 +150,17 @@ function generarTarjetaHtml(producto) {
     if (producto != null) {
         return `
             <div class="col">
-                <div class="card" style="width: 11rem;">
+                <div class="card h-100" style="width: 11rem;">
                     <img src="${producto.imagen}" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">${producto.nombre}</h5>
                         <p class="card-text">$ ${producto.precio}</p>
-                        <a href="detalle.html?id=${producto.id}" class="btn btn-outline-primary">Ver producto</a>
+                        <!--<a href="detalle.html?id=${producto.id}" class="btn btn-outline-primary">Ver producto</a>-->
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-grid gap-2">
+                            <a href="detalle.html?id=${producto.id}" class="btn btn-outline-primary">Ver producto</a>
+                        </div>
                     </div>
                 </div>
             </div>
