@@ -26,8 +26,7 @@ if (rowStarwars != null) {
     const productosSw = productos.filter(el => el.categoria === "STAR_WARS");
 
     for (let i = 0; i < 6; i++) {
-        const htmlString = generarTarjetaHtml(productosSw[i]);
-        const html = document.createRange().createContextualFragment(htmlString);
+        const html = generarTarjetaHtml(productosSw[i]);
         
         rowStarwars.appendChild(html);
     }
@@ -37,8 +36,7 @@ if (rowConsolas != null) {
     const productosConsolas = productos.filter(el => el.categoria === "CONSOLAS");
 
     for (let i = 0; i < 6; i++) {
-        const htmlString = generarTarjetaHtml(productosConsolas[i]);
-        const html = document.createRange().createContextualFragment(htmlString);
+        const html = generarTarjetaHtml(productosConsolas[i]);
 
         rowConsolas.appendChild(html);
     }
@@ -48,8 +46,7 @@ if (rowDiversos != null) {
     const productosDiversos = productos.filter(el => el.categoria === "DIVERSOS");
 
     for (let i = 0; i < 6; i++) {
-        const htmlString = generarTarjetaHtml(productosDiversos[i]);
-        const html = document.createRange().createContextualFragment(htmlString);
+        const html = generarTarjetaHtml(productosDiversos[i]);
 
         rowDiversos.appendChild(html);
     }
