@@ -155,7 +155,6 @@ function generarTarjetaHtml(producto) {
                     <div class="card-body">
                         <h5 class="card-title">${producto.nombre}</h5>
                         <p class="card-text">$ ${producto.precio}</p>
-                        <!--<a href="detalle.html?id=${producto.id}" class="btn btn-outline-primary">Ver producto</a>-->
                     </div>
                     <div class="card-footer">
                         <div class="d-grid gap-2">
@@ -174,7 +173,7 @@ function generarHtmlParaDescripcionDeProducto(producto) {
     if (producto != null) {
         const html = `
             <div class="col">
-                <img src="${producto.imagen}">
+                <img src="${producto.imagen}" class="img-fluid">
             </div>
             <div class="col">
                 <h1>${producto.nombre}</h1>
