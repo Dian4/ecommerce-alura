@@ -13,7 +13,6 @@
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"></script>
     </head>
-
     <body>
         <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
             <a class="navbar-brand" href="index.html">
@@ -39,7 +38,7 @@
                         </div>
                         <div class="col">
                             <div class="d-grid gap-2 col-6 mx-auto">
-                                <a href="login.html" class="btn btn-outline-success">Login</a>
+                                <a href="#" class="btn btn-outline-success">Login</a>
                             </div>
                         </div>
                     </div>
@@ -47,22 +46,28 @@
             </div>
         </nav>
         <div style="background: #E5E5E5;">
-            <div class="container contenedor-articulos">
-                <div id="row-descripcion" class="row align-items-center">
-                </div>
-            </div>
-            <div class="container contenedor-articulos">
-                <div class="row">
-                    <div class="col">
-                        <h3>Productos similares</h3>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 col-sm-12" style="padding: 40px;">
+                        <h4 class="text-center">Iniciar Sesión</h4>
+                        <br>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-lg" id="email" placeholder="Escriba su correo electrónico" required autofocus>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control form-control-lg" id="password" placeholder="Escriba su contraseña" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </div>
+                        </form>
                     </div>
-                </div>
-                <div id="row-similares" class="row">
                 </div>
             </div>
         </div>
         <footer class="container-fluid">
-            <div class="row footer-form" style="padding: 65px">
+            <div class="row footer-form" style="padding: 95px">
                 <div class="col">
                     <i class="fa-solid fa-gamepad alura-geek-azul"></i>
                     <span class="alura-geek-azul">Alura</span>
@@ -98,6 +103,6 @@
         </footer>
         <script src='assets/js/productos.js'></script>
         <script src='assets/js/main.js'></script>
-        <script src='assets/js/detalle.js'></script>
+        <script src='assets/js/login.js'></script>
     </body>
 </html>
