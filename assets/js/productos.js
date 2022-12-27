@@ -185,3 +185,32 @@ function generarHtmlParaDescripcionDeProducto(producto) {
         return document.createRange().createContextualFragment(html);
     }
 }
+
+function generarTarjetaHtmlAdmin(producto) {
+    if (producto != null) {
+        const html = `
+            <div class="col">
+                <div class="card h-100" style="width: 11rem;">
+                    <img src="${producto.imagen}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">${producto.nombre}</h5>
+                        <p class="card-text">$ ${producto.precio}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#actualizarProductoModal"
+                            data-product-id="${producto.id}">Actualizar</button>
+                        <br><br>
+                        <button class="btn btn-outline-danger"
+                            data-bs-toggle="modal"
+                            data-bs-target="#eliminarProductoModal"
+                            data-product-id="${producto.id}">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        return document.createRange().createContextualFragment(html);
+    }
+}

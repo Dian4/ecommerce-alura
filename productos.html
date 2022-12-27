@@ -47,14 +47,148 @@
             </div>
         </nav>
         <div style="background: #E5E5E5;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-sm-12" style="padding: 40px;">
-                        <h4 class="text-center">Todos los productos</h4>
+            <div class="container contenedor-articulos">
+                <div class="row">
+                    <div class="col">
+                        <h3>Todos los productos</h3>
+                    </div>
+                    <div class="col text-end">
+                        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#agregarProductoModal">
+                            Agregar producto
+                        </button>
+                    </div>
+                </div>
+                <br>
+                <div id="row-productos" class="row">
+                </div>
+            </div>
+        </div>
+        <!-- Ventanas emergentes (Modals) -->
+
+        <!-- Agregar Producto Modal -->
+        <div id="agregarProductoModal" class="modal fade" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-bg-primary">
+                        <h1 class="modal-title fs-5">Agregar Nuevo Producto</h1>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <form id="formAgregarProducto">
+                                        <div class="mb-3">
+                                            <label class="form-label">URL de imagen</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Categoría</label>
+                                            <select class="form-select">
+                                                <option value="STAR_WARS">Star Wars</option>
+                                                <option value="CONSOLAS">Consolas</option>
+                                                <option value="DIVERSOS">Diversos</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Nombre del producto</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Precio del producto</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Descripción del producto</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="btnAgregarProducto" class="btn btn-primary">Guardar cambios</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Actualizar Producto Modal -->
+        <div id="actualizarProductoModal" class="modal fade" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-bg-success">
+                        <h1 class="modal-title fs-5">Actualizar Producto</h1>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <form id="formActualizarProducto">
+                                        <div class="mb-3">
+                                            <label class="form-label">URL de imagen</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Categoría</label>
+                                            <select class="form-select">
+                                                <option value="STAR_WARS">Star Wars</option>
+                                                <option value="CONSOLAS">Consolas</option>
+                                                <option value="DIVERSOS">Diversos</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Nombre del producto</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Precio del producto</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Descripción del producto</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="btnActualizarProducto" class="btn btn-success">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eliminar Producto Modal -->
+        <div id="eliminarProductoModal" class="modal fade" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-bg-danger">
+                        <h1 class="modal-title fs-5">Eliminar Producto</h1>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="btnEliminarProducto" class="btn btn-danger">Eliminar producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer class="container-fluid">
             <div class="row footer-form" style="padding: 95px">
                 <div class="col">
