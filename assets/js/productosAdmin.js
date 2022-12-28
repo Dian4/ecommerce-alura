@@ -60,7 +60,8 @@ eliminarProductoModal.addEventListener("show.bs.modal", event => {
     const template = document.createElement("template");
     template.innerHTML = `
         <p>¿Está seguro de que quiere eliminar este artículo?</p>
-        <b class="text-danger">${producto.nombre}</b>`;
+        <b class="text-danger">${producto.nombre}</b>
+        <input type="hidden" value="${producto.id}">`;
 
     col.replaceChildren(...template.content.childNodes);
 });
@@ -169,6 +170,19 @@ btnActualizarProducto.onclick = event => {
         localStorage.setItem("PRODUCTOS", JSON.stringify(productos));
         location.reload();
     }
+};
+
+// Se agrega el evento para eliminar el producto seleccionado
+const btnEliminarProducto = document.querySelector("#btnEliminarProducto");
+
+btnEliminarProducto.onclick = event => {
+    const modal = document.querySelector("#eliminarProductoModal");
+    const hidden = modal.querySelector("input[type=hidden]");
+    const productId = hidden.value;
+    
+    productos = productos.filter(prod => prod.id !== productId);
+    localStorage.setItem("PRODUCTOS", JSON.stringify(productos));
+    location.reload();
 };
 
 
