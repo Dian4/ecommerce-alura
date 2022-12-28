@@ -62,3 +62,67 @@ eliminarProductoModal.addEventListener("show.bs.modal", event => {
 
     col.replaceChildren(...template.content.childNodes);
 });
+
+
+// Se agrega el evento para crear un nuevo producto y agregarlo a la lista de productos
+const btnAgregarProducto = document.querySelector("#btnAgregarProducto");
+
+btnAgregarProducto.onclick = event => {
+    const modal = document.querySelector("#agregarProductoModal");
+    const form = modal.querySelector("form");
+    let esValido = true;
+
+    const urlImagen = form[0];
+    const categoria = form[1];
+    const nombre = form[2];
+    const precio = form[3];
+    const descripcion = form[4];
+
+    if (nombre.value == null || nombre.value.trim() === "") {
+        nombre.classList.add("is-invalid");
+        esValido = false;
+    }
+
+    if (precio.value == null || precio.value.trim() === "" || isNaN(precio.value.trim())) {
+        precio.classList.add("is-invalid");
+        esValido = false;
+    }
+
+    if (descripcion.value == null || descripcion.value.trim() === "") {
+        descripcion.classList.add("is-invalid");
+        esValido = false;
+    }
+
+    if (esValido) {
+        let imagen;
+
+        if (urlImagen.value == null || urlImagen.value.trim() === "") {
+            imagen = "assets/img/img-unknown.png";
+        } else {
+            imagen = urlImagen.value.trim();
+        }
+
+        let nuevoProducto = {
+            id: crypto.randomUUID(),
+            nombre: nombre.value.trim(),
+            precio: precio.value.trim(),
+            descripcion: descripcion.value.trim(),
+            imagen: imagen,
+            categoria: categoria.value
+        };
+
+        productos.push(nuevoProducto);
+        localStorage.setItem("PRODUCTOS", JSON.stringify(productos));
+        location.reload();
+    }
+};
+
+// Se da de alta evento para los inputs de los formularios, para eliminar las clases de validación de Bootstrap
+// cuando el usuario comience a teclear en ellas
+document.querySelectorAll("input[type=text], textarea").forEach(input => {
+    input.onkeydown = event => {
+        if (input.classList.contains("is-invalid")) {
+            input.classList.remove("is-invalid");
+        }
+    };
+});
