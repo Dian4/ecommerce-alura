@@ -1,10 +1,8 @@
 // Verificamos si el usuario está loggeado en el sistema
 // Si no lo está, lo regresamos a la página principal
-const queryParams = new URLSearchParams(window.location.search);
 const estaLoggeado = localStorage.getItem("ESTA_LOGGEADO");
-const estaLoggeadoParam = queryParams.get("estaLoggeado");
 
-if (estaLoggeadoParam === null) {
+if (estaLoggeado === null) {
     window.location.replace("index.html");
 }
 
@@ -195,3 +193,12 @@ document.querySelectorAll("input[type=text], textarea").forEach(input => {
         }
     };
 });
+
+
+// Funcionalidad para cerrar la sesión cuando se haga clic en el botón de la barra de navegación
+// Elimina la variable ESTA_LOGGEADO de localStorage
+document.querySelector("#btnCerrarSesion").onclick = event => {
+    localStorage.removeItem("ESTA_LOGGEADO");
+
+    window.location.replace("index.html");
+};

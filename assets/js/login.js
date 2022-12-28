@@ -15,7 +15,7 @@ formulario.onsubmit = evento => {
     if (email === "admin@alurageek.com" && password === "admin") {
         localStorage.setItem("ESTA_LOGGEADO", "true");
 
-        window.location.replace("productos.html?estaLoggeado=true");
+        window.location.replace("productos.html");
     } else {
         alert("El email o el password son incorrectos. Intente de nuevo.");
     }
