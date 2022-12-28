@@ -36,12 +36,14 @@ actualizarProductoModal.addEventListener("show.bs.modal", event => {
     const nombre = form[2];
     const precio = form[3];
     const descripcion = form[4];
+    const id = form[5];
 
     urlImagen.value = producto.imagen;
     categoria.value = producto.categoria;
     nombre.value = producto.nombre;
     precio.value = producto.precio;
     descripcion.value = producto.descripcion;
+    id.value = producto.id;
 });
 
 // Se agrega un evento para manejar el modal de eliminar producto, obteniendo el ID de producto del botón que lanza el modal
@@ -116,6 +118,59 @@ btnAgregarProducto.onclick = event => {
         location.reload();
     }
 };
+
+// Se agrega el evento para actualizar la información de un producto existente.
+const btnActualizarProducto = document.querySelector("#btnActualizarProducto");
+
+btnActualizarProducto.onclick = event => {
+    const modal = document.querySelector("#actualizarProductoModal");
+    const form = modal.querySelector("form");
+    let esValido = true;
+
+    const urlImagen = form[0];
+    const categoria = form[1];
+    const nombre = form[2];
+    const precio = form[3];
+    const descripcion = form[4];
+    const id = form[5];
+
+    if (nombre.value == null || nombre.value.trim() === "") {
+        nombre.classList.add("is-invalid");
+        esValido = false;
+    }
+
+    if (precio.value == null || precio.value.trim() === "" || isNaN(precio.value.trim())) {
+        precio.classList.add("is-invalid");
+        esValido = false;
+    }
+
+    if (descripcion.value == null || descripcion.value.trim() === "") {
+        descripcion.classList.add("is-invalid");
+        esValido = false;
+    }
+
+    if (esValido) {
+        let imagen;
+
+        if (urlImagen.value == null || urlImagen.value.trim() === "") {
+            imagen = "assets/img/img-unknown.png";
+        } else {
+            imagen = urlImagen.value.trim();
+        }
+
+        const producto = productos.find(prod => prod.id === id.value);
+
+        producto.nombre = nombre.value.trim();
+        producto.precio = precio.value.trim();
+        producto.descripcion = descripcion.value.trim();
+        producto.imagen = imagen;
+        producto.categoria = categoria.value;
+
+        localStorage.setItem("PRODUCTOS", JSON.stringify(productos));
+        location.reload();
+    }
+};
+
 
 // Se da de alta evento para los inputs de los formularios, para eliminar las clases de validación de Bootstrap
 // cuando el usuario comience a teclear en ellas
